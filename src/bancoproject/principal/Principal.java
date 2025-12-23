@@ -1,7 +1,6 @@
 package bancoproject.principal;
 
 import bancoproject.modelos.*;
-import java.util.ArrayList;
 
 public class Principal {
 
@@ -10,6 +9,7 @@ public class Principal {
         Leitor leitor = new Leitor();
 
         boolean sistemaAtivo = true;
+        banco.carregarDados();
 
         String menuPrincipal = """
                 =========================
@@ -27,22 +27,17 @@ public class Principal {
             if (opcao == 0) {
                 System.out.println("Encerrando o sistema...");
                 sistemaAtivo = false;
-            }
-
-            else if (opcao == 1) {
+                banco.salvarTudo();
+            } else if (opcao == 1) {
                 Conta contaLogada = null;
 
                 String loginDigitado = leitor.lerTexto("Digite seu login (ID): ");
                 String senhaDigitada = leitor.lerTexto("Digite sua senha: ");
 
-                Conta adm = new Conta("1", 1000, "1");
-                adm.setId("1");
-
-                banco.adicionarConta(adm);
-
-                contaLogada = banco.buscarConta(loginDigitado) ;
-                contaLogada = banco.validarSenha(senhaDigitada, contaLogada);
-
+                contaLogada = banco.buscarConta(loginDigitado);
+                if (contaLogada != null) {
+                    contaLogada = banco.validarSenha(senhaDigitada, contaLogada);
+                }
 
                 if (contaLogada != null) {
                     System.out.println("Login realizado com sucesso! Bem-vindo, " + contaLogada.getNome());
@@ -89,10 +84,8 @@ public class Principal {
                 } else {
                     System.out.println("ERRO: Login ou senha incorretos (ou conta inexistente).");
                 }
-            }
+            } else if (opcao == 2) {
 
-            else if (opcao == 2) {
-                
                 System.out.println("--- CRIANDO NOVA CONTA ---");
                 String nome = leitor.lerTexto("Digite seu nome completo:");
                 String senha = leitor.lerTexto("Crie uma senha:");

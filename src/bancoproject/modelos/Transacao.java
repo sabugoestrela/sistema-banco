@@ -25,6 +25,10 @@ public class Transacao {
         this.valorOperacao = valorOperacao;
     }
 
+    public String formatarParaSalvar() {
+        return this.tipoOperacao + "," + this.valorOperacao;
+    }
+
     @Override
     public String toString() {
         return tipoOperacao + " no valor de R$" + valorOperacao;

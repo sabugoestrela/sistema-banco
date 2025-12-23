@@ -9,7 +9,6 @@ public class Conta {
     private ArrayList<Transacao> extrato;
     private String senha;
     private String id;
-    private static int totalContas = 0;
     private static ArrayList<String> idsUtilizados = new ArrayList<>();
 
     public Conta(String nome, double saldo, String senha) {
@@ -17,7 +16,6 @@ public class Conta {
         this.saldo = saldo;
         this.extrato = new ArrayList<>();
         this.senha = senha;
-        Conta.totalContas++;
 
         Random aleatorio = new Random();
         String idGerado = "";
@@ -36,6 +34,17 @@ public class Conta {
 
         this.id = idGerado;
         idsUtilizados.add(this.id);
+    }
+
+    public Conta(String nome, String id, double saldo, String senha) {
+        this.nome = nome;
+        this.saldo = saldo;
+        this.extrato = new ArrayList<>();
+        this.senha = senha;
+        this.id = id;
+
+        idsUtilizados.add(this.id);
+
     }
 
     public String getId() {
@@ -103,5 +112,15 @@ public class Conta {
         for (Transacao t : this.extrato) {
             System.out.println(t);
         }
+    }
+
+    public String formatarParaSalvar() {
+        String dadosDaConta = this.nome + ";" + this.id + ";" + this.saldo + ";" + this.senha;
+
+        for (Transacao t : this.extrato) {
+            dadosDaConta += "#" + t.formatarParaSalvar();
+        }
+
+        return dadosDaConta;
     }
 }
