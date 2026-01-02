@@ -41,10 +41,11 @@ Pré-requisitos
     Java JDK instalado (versão 8 ou superior).
     
 ## ⚙️ Como Executar
-* Passo a passo
-  
+
 Clone este repositório:
-    git clone [https://github.com/sabugoestrela/sistema-banco.git](https://github.com/sabugoestrela/sistema-banco.git)
+
+    git clone [https://github.com/sabugoestrela/sistema-banco.git](https://github.com/sabugoestrela/sistema-banco.git) 
+   
 
 Compile os arquivos Java:
 
