@@ -36,11 +36,11 @@ O código está organizado nos seguintes pacotes:
 
 O diferencial deste projeto é o sistema de salvamento manual implementado na classe `Banco`. Os dados são armazenados no seguinte formato textual para facilitar a leitura e debug:
 
- ⚙️ Como Executar
 Pré-requisitos
 
     Java JDK instalado (versão 8 ou superior).
-
+    
+⚙️ Como Executar
 Passo a passo
 Clone este repositório:
     git clone [https://github.com/sabugoestrela/sistema-banco.git](https://github.com/sabugoestrela/sistema-banco.git)
