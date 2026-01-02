@@ -42,6 +42,7 @@ Pré-requisitos
     
 ## ⚙️ Como Executar
 * Passo a passo
+  
 Clone este repositório:
     git clone [https://github.com/sabugoestrela/sistema-banco.git](https://github.com/sabugoestrela/sistema-banco.git)
 
