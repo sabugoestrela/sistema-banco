@@ -36,7 +36,6 @@ O código está organizado nos seguintes pacotes:
 
 O diferencial deste projeto é o sistema de salvamento manual implementado na classe `Banco`. Os dados são armazenados no seguinte formato textual para facilitar a leitura e debug:
 
-```text
 Nome;ID;Saldo;Senha#TipoTransacao,Valor#TipoTransacao,Valor
 
 ⚙️ Como Executar
