@@ -42,19 +42,14 @@ Pré-requisitos
     Java JDK instalado (versão 8 ou superior).
 
 Passo a passo
-
-    Clone este repositório:
-    Bash
-
-git clone [https://github.com/sabugoestrela/sistema-banco.git](https://github.com/sabugoestrela/sistema-banco.git)
+Clone este repositório:
+    git clone [https://github.com/sabugoestrela/sistema-banco.git](https://github.com/sabugoestrela/sistema-banco.git)
 
 Compile os arquivos Java:
-Bash
 
-javac -d . *.java
+    javac -d . *.java
 
 Execute a classe principal:
-Bash
 
     java bancoproject.principal.Principal
 
